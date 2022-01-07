@@ -11,7 +11,7 @@ public class FlipkartHomePage extends WebPage{
 		super(driver);
 	}
 	
-	private By prepareHeaderLocatorWithHeaderText(String text) {
+	private By prepareHeaderLocatorWithFlipkart(String text) {
 		return By.xpath("//h1[text()='" + text + "']");
 	}
 	
