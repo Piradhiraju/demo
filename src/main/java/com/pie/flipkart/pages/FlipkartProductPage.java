@@ -1,7 +1,13 @@
 package com.pie.flipkart.pages;
 
-public class FlipkartProductPage {
+import org.openqa.selenium.WebDriver;
+
+import com.pie.flipkartDemo.core.WebPage;
+
+public class FlipkartProductPage extends WebPage {
 	
-	
+	public FlipkartProductPage(WebDriver driver) {
+		super(driver);
+	}
 
 }
