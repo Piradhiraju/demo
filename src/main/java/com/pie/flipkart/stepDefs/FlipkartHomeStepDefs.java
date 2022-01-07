@@ -16,4 +16,6 @@ private DriverFactory driverFactory;
 	public void navigateToTheHerokuApp() {
 		driverFactory.getDriver().navigate().to("https://www.flipkart.com/");
 	}
+	
+	//This step def represents the step in the FlipkartHomePage class
 }
