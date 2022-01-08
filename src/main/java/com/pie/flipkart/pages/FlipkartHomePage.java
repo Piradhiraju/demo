@@ -11,8 +11,22 @@ public class FlipkartHomePage extends WebPage{
 		super(driver);
 	}
 	
-	private By prepareHeaderLocatorWithFlipkart(String text) {
-		return By.xpath("//h1[text()='" + text + "']");
+	private By prepareHeaderLocator(String text) {
+		return By.xpath("//a[@href='" + text + "']");
 	}
+	
+	private By prepareLocatorWithTextInAttributeA(String text) {
+		return By.xpath("//a[text()='" + text + "']");
+	}
+	
+	public Boolean isHeaderDisplayed(String text) {
+		super.waitForVisibility(prepareHeaderLocator(text));
+		return super.isDisplayed(prepareHeaderLocator(text));
+	}	
+	
+	public void clickOnTheLink(String text) {
+		super.waitForClickability(prepareLocatorWithTextInAttributeA(text));
+		super.click(prepareLocatorWithTextInAttributeA(text));
+	} 
 	
 }
