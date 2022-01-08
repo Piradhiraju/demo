@@ -27,16 +27,8 @@ public class WebPage {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	
-	public void waitForPresence(By locator) {
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-	}
-	
-	public void sendKeys(By locator, String text) {
-		driver.findElement(locator).sendKeys(text);
-	}
-
-	public String getAttribute(By locator) {
-		return driver.findElement(locator).getAttribute("value");
+	public Boolean isDisplayed(By locator) {
+		return driver.findElement(locator).isDisplayed();
 	}
 	
 }
